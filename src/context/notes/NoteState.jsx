@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 const NoteState = (props) => {
-    const host = "http://localhost:3001"
+    const host = "https://inotebook-backend-pj3z.onrender.com"
     const notesInitial = []
     const token = localStorage.getItem('token')
 
