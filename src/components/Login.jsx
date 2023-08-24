@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = (props) => {
 
@@ -34,7 +34,7 @@ const Login = (props) => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value })
     }
     return (
-        <div>
+        <div className='container'>
             <form onSubmit={handleSubmit} method='post'>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
@@ -46,6 +46,7 @@ const Login = (props) => {
                 </div>
                 <button type="submit" className="btn btn-primary" >Submit</button>
             </form>
+            <p>Don&apos;t have an account? <Link to='/signup'>Register</Link></p>
         </div>
     )
 }

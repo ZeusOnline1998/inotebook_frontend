@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter, MemoryRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <NoteState>
-        <BrowserRouter>
+        <MemoryRouter>
           <Navbar />
           <Alert alert={alert} />
           <div className="container mt-2">
@@ -36,7 +36,7 @@ function App() {
 
             </Routes>
           </div>
-        </BrowserRouter>
+        </MemoryRouter>
       </NoteState>
       
     </>

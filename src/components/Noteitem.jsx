@@ -8,7 +8,7 @@ const Noteitem = (props) => {
 
     const { note, updateNote } = props;
     return (
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-4">
             <div className="card mt-2">
                 <div className="card-body">
                     <div className="d-flex ">
@@ -17,6 +17,7 @@ const Noteitem = (props) => {
                         <i className="fa-solid fa-pen-to-square mx-2" onClick={() => {updateNote(note)}}></i>
                     </div>
                     <p className="card-text">{note.description}</p>
+                    <p className="card-text">Category: {note.tag}</p>
                     
                 </div>
             </div>
