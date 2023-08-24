@@ -7,11 +7,12 @@ const Signup = (props) => {
 
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", cpassword: "" });
     let navigate = useNavigate();
+    const host = import.meta.env.VITE_SERVER_URL
 
     const handleSubmit = async (e) => {
         const {name, email, password} = credentials;
         e.preventDefault();
-        const response = await fetch("http://localhost:3001/api/auth/createuser", {
+        const response = await fetch(`${host}/api/auth/createuser`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',

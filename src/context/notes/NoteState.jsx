@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 const NoteState = (props) => {
-    const host = "https://inotebook-backend-pj3z.onrender.com"
+    const host = import.meta.env.VITE_SERVER_URL
     const notesInitial = []
     const token = localStorage.getItem('token')
 
